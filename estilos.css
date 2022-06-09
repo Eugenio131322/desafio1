@@ -289,13 +289,7 @@ section label {
     font-family: "Comic Sans MS", sans-serif;
     text-align: center;
 }
-}
-/*Tablet*/
-@media (min-width: 481px) and (max-width: 1023px) {
-    body {
-        background-color: blueviolet;
-    }
-}
+
 
 /*------------------------Transcisiones------------------------------*/
 
@@ -307,7 +301,7 @@ section label {
     transform: rotate(45deg);
 } 
 .escalar {
-    transform: scale(1.7, 1.2);
+    transform: scale(1.5, 1.1);
 }
 
 .animacion {
@@ -327,7 +321,13 @@ section label {
     }
 }
 
-
+}
+/*Tablet*/
+@media (min-width: 481px) and (max-width: 1023px) {
+    body {
+        background-color: blueviolet;
+    }
+}
 
 
 
