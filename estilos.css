@@ -1,0 +1,576 @@
+/*-----Reset-----*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*----/------/------/-----Responsive Design-------/---------/------/--*/
+
+
+
+
+/*Desktop*/
+@media (min-width: 1024px) {
+    #grid-area{
+        display: grid;
+        grid-template-areas: 
+        " encabezado encabezado "
+        " menu1 contenido "
+        " pie pie "
+        ;
+        grid-template-columns: 10% auto;
+        grid-template-rows: 30vh auto 20vh;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    
+    }
+    
+    header {
+        grid-area: encabezado;
+    }
+    
+    .menu {
+        grid-area: menu1;
+    }
+    main {
+        grid-area: contenido;
+    }
+    footer {
+        grid-area: pie;
+    }
+    
+    .border {
+        border: solid 2px palevioletred;
+    }
+    /*
+    #grid {
+        display: grid;
+    
+        grid-template-columns:100% ;
+        grid-template-rows: 30vh auto 20vh;
+    }
+    */
+
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: green;
+
+    }
+    /*------HEADER el Encabezado------*/   
+
+.header {
+    display: flex;                     /* ----ajustandio el encabezado*/
+    flex-flow: row nowrap;
+    background-color:blanchedalmond;/*------color de fondo*/
+    width: 100%; 
+    height: 30vh;                     /*----- anchura total del header*/
+
+}
+
+.header article {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+   
+    width: 25%;
+    
+}
+
+/*----Etiqueta de imagem---*/
+.header  img  {
+    width: 60%;
+    height: 60%;
+    border-radius: 25%; 
+    margin-top: 5px;
+    margin-top: 10px;              /*------bordes redonde al logo*/
+    
+}
+/*----Etiqueta de titulo----*/
+.header h1 {
+    color: #f50404;                   /*------color al texto*/
+    font-family: roboto sans-serif;     /*-----tipo de fuente*/
+    text-align: center;
+    padding: 5px;                       /*-----Espacio interno*/
+    margin: 3px;                   /*------Espacio Externo*/
+
+}
+
+
+.header nav {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    align-items: flex-end;
+    margin-left: 100px;
+}
+
+/*----Etiqueta de listas----*/
+.header nav span {
+   
+    margin: 15px;
+    list-style-type: none;                 /*----- eliminar listas*/
+   
+   
+}
+
+
+/*------Etiqueta de enlace------*/
+.header  a {
+  
+    background-color: rgb(207, 79, 19);
+    border: solid 2px white;            /*------bordes para el texto*/
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;                /* -----eliminar subrayado*/
+    color: black;                       /* ------agrega color al texto*/
+    border-radius: 10%; 
+    width: 10%;                     
+}
+
+
+span a:hover {
+    background-color: white;
+    color: #f50404;
+}
+
+/*---------------Etiqueta de navegacion----------*/
+
+.menu {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    padding: 15px 10px;
+    overflow: hidden;
+}
+.menu span {
+    color: black;
+    margin: 5px;
+    padding: 5px;
+   
+
+}
+
+
+/*-------------------MAIN el Contenido ---------------------------------*/
+
+.main {
+
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 70vh;
+       /* -----Agregando iomagen de fondo-------*/
+    background-image: url("https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-repeat: no-repeat;           /*---------no repite la imagen de fondo*/
+    background-size: cover;                 /* --------estirar la imagen*/
+    background-position: center center;     /*----------centrar la imagen de fondo*/
+}
+
+.main a {
+    
+    text-decoration: none;
+    color: rgb(18, 44, 241);
+    margin: 10px;
+    padding: 10px;
+}
+.main a:hover {
+    color: white;
+}
+
+
+/*------Etiqueta de titulo------*/
+.main h2 {
+    margin: 10px 10% 15px 10%;
+   
+    padding-left: 20%;
+    text-transform: uppercase;                /* ------cambiar texto a mayusculas*/
+    color: brown;
+    font-weight: bold;                        /*--------- resaltando texto*/
+    font-size: 300%;                         /* -----------tamaño de fuente*/
+}
+/*Etiqueta de titulo*/
+.main h3 {
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 5px;    
+    padding: 5px;
+}
+/* ------Etiqute de parrafo-------*/
+.main  p {
+    
+    padding: 20px;
+    font-style: italic;                        /*------Estilo de la fuente*/
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+/*-------Etiqueta de article-------*/
+
+img {
+    width: 100%;
+    height: 20vh;
+}
+
+.galeria {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 5px;
+    padding: 5px;
+             
+}
+
+.galeria article {
+    margin: 5px;
+    padding: 5px;
+     text-align: center; 
+}
+
+/*-----Etiqueta de seccion----*/
+section {
+    
+    padding: 20px;
+}
+/*-----Etiqueta usada en formulartio para agregar nombre-----*/
+section label {
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+/*--------------------FOOTER el Pie de Pagina--------------------------*/
+
+
+.footer {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(64, 139, 64);
+}
+
+.footer  h2{
+    color: black;
+    font-weight: bold;
+    font-size: 300%;
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+}
+
+.footer h3 {
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+
+
+}
+
+.footer p {
+    margin-top: 2px;
+    font-style: italic;
+    font-size: 15px;
+    font-family: "Comic Sans MS", sans-serif;
+    text-align: center;
+}
+}
+/*Tablet*/
+@media (min-width: 481px) and (max-width: 1023px) {
+    body {
+        background-color: blueviolet;
+    }
+}
+
+/*------------------------Transcisiones------------------------------*/
+
+.lineal {
+    background-image: linear-gradient(pink 23%,rgb(85, 133, 205)43%,red 75% ); 
+}
+
+.rotar {
+    transform: rotate(45deg);
+} 
+.escalar {
+    transform: scale(1.7, 1.2);
+}
+
+.animacion {
+    animation-name: animacion;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animacion {
+    from {
+        transform:rotate(1deg) ;
+
+    }
+    to {
+        transform: rotate(360deg);
+
+    }
+}
+
+
+
+
+
+
+
+
+/*----/----/----/---Smartphone----/----/----/----*/
+
+
+
+
+@media (max-width: 480px) {
+    #grid-area{
+        display: grid;
+        grid-template-areas: 
+        "encabezado"
+        "menu1"
+        "contenido"
+        "pie"
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 2fr 1fr;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    
+    }
+    
+    header {
+        grid-area: encabezado;
+    }
+    
+    .menu {
+        grid-area: menu1;
+    }
+    main {
+        grid-area: contenido;
+    }
+    footer {
+        grid-area: pie;
+    }
+    
+    .border {
+        border: solid 2px palevioletred;
+    }
+    /*
+    #grid {
+        display: grid;
+    
+        grid-template-columns:100% ;
+        grid-template-rows: 30vh auto 20vh;
+    }
+    */
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: yellow;
+    }
+    .header {
+        display: flex;                     /* ----ajustandio el encabezado*/
+        flex-flow: column nowrap;
+        background-color:blanchedalmond;/*------color de fondo*/
+        width: 100%;     
+    }
+    .header article {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 30%; 
+    }
+    
+    /*----Etiqueta de imagem---*/
+    .header  img  {
+        width: 60%;
+        height: 60%;
+        border-radius: 25%; 
+        margin-top: 5px;
+        margin-top: 10px;              /*------bordes redonde al logo*/
+    }
+    
+    .header h1 {
+        color: #f50404;                   /*------color al texto*/
+        font-family: roboto sans-serif;     /*-----tipo de fuente*/
+        text-align: center;
+        padding: 5px;                       /*-----Espacio interno*/
+        margin: 3px;                   /*------Espacio Externo*/
+    }
+    .header nav {
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: black;
+        width: 100%; 
+        
+    }
+   
+     .header nav span {
+        display: flex;
+       
+        width: 50%; 
+    }
+    .menu {
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: white;
+        padding: 15px 10px;
+        
+    }
+    .menu span a {
+        margin: 5px;
+        padding: 5px;
+        color: blue;
+    
+    }
+
+    /*------Etiqueta de enlace------*/
+
+    .header a {
+    
+    background-color: rgb(207, 79, 19);
+    border: solid 2px white;            /*------bordes para el texto*/
+    margin: 3px;
+    padding: 8px;
+    text-decoration: none;                /* -----eliminar subrayado*/
+    color: black;                       /* ------agrega color al texto*/
+    border-radius: 10%;
+    font-size: 10px; 
+                  
+}
+
+
+/*-------------------MAIN el Contenido ---------------------------------*/
+
+.main a {
+    display: none;
+}
+.main {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 350vh;
+       /* -----Agregando iomagen de fondo-------*/
+    background-image: url("https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-repeat: no-repeat;           /*---------no repite la imagen de fondo*/
+    background-size: cover;                 /* --------estirar la imagen*/
+    background-position: center center;     /*----------centrar la imagen de fondo*/
+}
+/*------Etiqueta de titulo------*/
+.main h2 {
+    margin: 5%;
+    padding: 5%;
+    text-transform: uppercase;                /* ------cambiar texto a mayusculas*/
+    color: brown;
+    font-weight: bold;                        /*--------- resaltando texto*/
+    font-size: 300%; 
+    text-align: center;                        /* -----------tamaño de fuente*/
+}
+/*Etiqueta de titulo*/
+.main h3 {
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 5px;    
+    padding: 5px;
+}
+/* ------Etiqute de parrafo-------*/
+.main  p {
+    
+    padding: 20px;
+    font-style: italic;                        /*------Estilo de la fuente*/
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*-------Etiqueta de article-------*/
+
+img {
+    width: 90%;
+    height: 40vh;
+}
+
+.galeria {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 5px;
+    padding: 5px;
+             
+}
+
+.galeria article {
+    width: 100%;
+    height: 50vh;
+    margin: 5px;
+    padding: 5px;
+     text-align: center; 
+}
+
+/*-----Etiqueta de seccion----*/
+section {
+    
+    padding: 20px;
+}
+/*-----Etiqueta usada en formulartio para agregar nombre-----*/
+section label {
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 20px;
+}
+/*--------------------FOOTER el Pie de Pagina--------------------------*/
+
+
+.footer {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(64, 139, 64);
+}
+
+.footer  h2{
+    color: black;
+    font-weight: bold;
+    font-size: 100%;
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+}
+
+.footer h3 {
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+
+
+}
+
+.footer p {
+    margin: 2px;
+    padding: 2px;
+    font-style: italic;
+    font-size: 15px;
+    font-family: "Comic Sans MS", sans-serif;
+    text-align: center;
+}
+    
+      
+}
