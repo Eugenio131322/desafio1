@@ -31,7 +31,7 @@
         " pie pie "
         ;
         grid-template-columns: 10% auto;
-       
+    
         grid-column-gap: 5px;
         grid-row-gap: 5px;
     
@@ -74,7 +74,7 @@
 
 .header {
     display: flex;                     /* ----ajustandio el encabezado*/
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     background-color:blanchedalmond;/*------color de fondo*/
 
 }
@@ -82,7 +82,7 @@
 .header article {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+
     align-items: center;
    
     width: 25%;
@@ -113,13 +113,16 @@
     display: flex;
     flex-flow: row nowrap;
    
-    align-items: flex-end;
-    margin-left: 100px;
+  
+    
+  
 }
 
 /*----Etiqueta de listas----*/
 .header nav span {
-   
+    display: flex;
+    justify-content: center;
+    width: 100%;
     margin: 15px;
     list-style-type: none;                 /*----- eliminar listas*/
    
@@ -129,15 +132,15 @@
 
 /*------Etiqueta de enlace------*/
 .header  a {
-  
+    width: 70%;
     background-color: rgb(207, 79, 19);
     border: solid 2px white;            /*------bordes para el texto*/
-    margin: 10px;
+    margin: 5px;
     padding: 10px;
     text-decoration: none;                /* -----eliminar subrayado*/
     color: black;                       /* ------agrega color al texto*/
     border-radius: 10%; 
-                       
+    text-align: center;     
 }
 
 
@@ -190,11 +193,11 @@ span a:hover {
 }
 
 
-/*------Etiqueta de titulo------*/
+/*------Etiqueta de titulo------*/ 
 .main h2 {
     margin: 10px 10% 15px 10%;
    
-    padding-left: 20%;
+    padding-left: 10%;
     text-transform: uppercase;                /* ------cambiar texto a mayusculas*/
     color: brown;
     font-weight: bold;                        /*--------- resaltando texto*/
@@ -219,7 +222,7 @@ span a:hover {
 /*-------Etiqueta de article-------*/
 
 img {
-    width: 100%;
+    
     height: 20vh;
 }
 
@@ -321,14 +324,18 @@ section label {
 
 
 
-/*Desktop*/
+
+/*----------/-----------Desktop----------/----------------*/
 @media (min-width: 1024px) {
-body {
-    background-color: blue;
-}
+
 }
 
-/*Tablet*/
+
+
+
+
+/*--------/-----------------Tablet--------------/---------*/
+
 @media (min-width: 481px) and (max-width: 1023px) {
     body {
         background-color: blueviolet;
@@ -336,13 +343,21 @@ body {
     #grid-area{
        
         grid-template-columns: auto;
-        grid-template-rows: auto;
-        
-         
+        grid-template-rows: auto;  
     
     }
-}
 
+    .header nav {
+        flex-flow: row wrap;
+        background-color: black;
+    }
+ 
+    .header a {
+        width: 25%;   
+    }
+
+}
+ 
 
 
 
@@ -354,6 +369,10 @@ body {
 
 
 @media (max-width: 480px) {
+ body{
+    background-color: blue;
+ }
+
     #grid-area{
        
         grid-template-areas: 
@@ -363,47 +382,34 @@ body {
         "pie"
         ;
         grid-template-columns: 100%;
-        grid-template-rows: 1fr 1fr 2fr 1fr;
+       
         
     }
 
     
 
-    
-.header {
-        /* ----ajustandio el encabezado*/
-flex-flow: column nowrap;
-background-color:blanchedalmond;/*------color de fondo*/
-
-}
-
-
-
-
-
 .header nav {
 
     background-color: black;
+    flex-flow: row wrap;
+    margin: 0%;
     
-
 }
 
-.header nav span {
-    display: flex;
 
 
-}
+
 .menu {
-    display: flex;
+ 
     flex-flow: row nowrap;
-    background-color: white;
-    padding: 15px 10px;
+    overflow: visible;
 
 }
 .menu span a {
-    margin: 5px;
-    padding: 5px;
+    margin: 0;
+    padding: 0;
     color: blue;
+    
 
 }
 
@@ -414,9 +420,9 @@ background-color:blanchedalmond;/*------color de fondo*/
 
     margin: 3px;
     padding: 8px;
-   
+    width: 25%;
 
-        font-size: 10px; 
+   
     
 }
 
@@ -429,8 +435,7 @@ background-color:blanchedalmond;/*------color de fondo*/
 .main {
 display: flex;
     flex-flow: column nowrap;
-    width: 100%;
-    height: 350vh;
+   
 /* -----Agregando iomagen de fondo-------*/
     background-image: url("https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-repeat: no-repeat;           /*---------no repite la imagen de fondo*/
@@ -503,8 +508,7 @@ section label {
 .footer {
     display: flex;
     flex-flow: column nowrap;
-    width: 100%;
-    height: 20vh;
+  
     background-color: rgb(64, 139, 64);
 }
 
