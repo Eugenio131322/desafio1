@@ -17,13 +17,12 @@
 
 
 
-/*----/------/------/-----Responsive Design-------/---------/------/--*/
+/*----/------/------/------------/---------/------/--*/
 
 
 
 
-/*Desktop*/
-@media (min-width: 1024px) {
+
     #grid-area{
         display: grid;
         grid-template-areas: 
@@ -32,7 +31,7 @@
         " pie pie "
         ;
         grid-template-columns: 10% auto;
-        grid-template-rows: 30vh auto 20vh;
+       
         grid-column-gap: 5px;
         grid-row-gap: 5px;
     
@@ -77,11 +76,9 @@
     display: flex;                     /* ----ajustandio el encabezado*/
     flex-flow: row nowrap;
     background-color:blanchedalmond;/*------color de fondo*/
-    width: 100%; 
-    height: 30vh;                     /*----- anchura total del header*/
 
 }
-
+ 
 .header article {
     display: flex;
     flex-flow: column nowrap;
@@ -115,7 +112,7 @@
 .header nav {
     display: flex;
     flex-flow: row nowrap;
-    width: 100%;
+   
     align-items: flex-end;
     margin-left: 100px;
 }
@@ -140,7 +137,7 @@
     text-decoration: none;                /* -----eliminar subrayado*/
     color: black;                       /* ------agrega color al texto*/
     border-radius: 10%; 
-    width: 10%;                     
+                       
 }
 
 
@@ -173,8 +170,7 @@ span a:hover {
 
     display: flex;
     flex-flow: row wrap;
-    width: 100%;
-    height: 70vh;
+
        /* -----Agregando iomagen de fondo-------*/
     background-image: url("https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-repeat: no-repeat;           /*---------no repite la imagen de fondo*/
@@ -260,8 +256,7 @@ section label {
 .footer {
     display: flex;
     flex-flow: column wrap;
-    width: 100%;
-    height: 20vh;
+
     background-color: rgb(64, 139, 64);
 }
 
@@ -321,11 +316,30 @@ section label {
     }
 }
 
+/*----/------/------/-----Responsive Design-------/---------/------/--*/
+
+
+
+
+/*Desktop*/
+@media (min-width: 1024px) {
+body {
+    background-color: blue;
 }
+}
+
 /*Tablet*/
 @media (min-width: 481px) and (max-width: 1023px) {
     body {
         background-color: blueviolet;
+    }
+    #grid-area{
+       
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        
+         
+    
     }
 }
 
@@ -341,7 +355,7 @@ section label {
 
 @media (max-width: 480px) {
     #grid-area{
-        display: grid;
+       
         grid-template-areas: 
         "encabezado"
         "menu1"
@@ -350,112 +364,60 @@ section label {
         ;
         grid-template-columns: 100%;
         grid-template-rows: 1fr 1fr 2fr 1fr;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-    
-    }
-    
-    header {
-        grid-area: encabezado;
-    }
-    
-    .menu {
-        grid-area: menu1;
-    }
-    main {
-        grid-area: contenido;
-    }
-    footer {
-        grid-area: pie;
-    }
-    
-    .border {
-        border: solid 2px palevioletred;
-    }
-    /*
-    #grid {
-        display: grid;
-    
-        grid-template-columns:100% ;
-        grid-template-rows: 30vh auto 20vh;
-    }
-    */
-
-    body {
-        width: 100%;
-        height: 100vh;
-        background-color: yellow;
-    }
-    .header {
-        display: flex;                     /* ----ajustandio el encabezado*/
-        flex-flow: column nowrap;
-        background-color:blanchedalmond;/*------color de fondo*/
-        width: 100%;     
-    }
-    .header article {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        width: 30%; 
-    }
-    
-    /*----Etiqueta de imagem---*/
-    .header  img  {
-        width: 60%;
-        height: 60%;
-        border-radius: 25%; 
-        margin-top: 5px;
-        margin-top: 10px;              /*------bordes redonde al logo*/
-    }
-    
-    .header h1 {
-        color: #f50404;                   /*------color al texto*/
-        font-family: roboto sans-serif;     /*-----tipo de fuente*/
-        text-align: center;
-        padding: 5px;                       /*-----Espacio interno*/
-        margin: 3px;                   /*------Espacio Externo*/
-    }
-    .header nav {
-        display: flex;
-        flex-flow: row nowrap;
-        background-color: black;
-        width: 100%; 
         
     }
-   
-     .header nav span {
-        display: flex;
-       
-        width: 50%; 
-    }
-    .menu {
-        display: flex;
-        flex-flow: row nowrap;
-        background-color: white;
-        padding: 15px 10px;
-        
-    }
-    .menu span a {
-        margin: 5px;
-        padding: 5px;
-        color: blue;
-    
-    }
 
-    /*------Etiqueta de enlace------*/
-
-    .header a {
     
-    background-color: rgb(207, 79, 19);
-    border: solid 2px white;            /*------bordes para el texto*/
+
+    
+.header {
+        /* ----ajustandio el encabezado*/
+flex-flow: column nowrap;
+background-color:blanchedalmond;/*------color de fondo*/
+
+}
+
+
+
+
+
+.header nav {
+
+    background-color: black;
+    
+
+}
+
+.header nav span {
+    display: flex;
+
+
+}
+.menu {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: white;
+    padding: 15px 10px;
+
+}
+.menu span a {
+    margin: 5px;
+    padding: 5px;
+    color: blue;
+
+}
+
+/*------Etiqueta de enlace------*/
+
+.header a {
+
+
     margin: 3px;
     padding: 8px;
-    text-decoration: none;                /* -----eliminar subrayado*/
-    color: black;                       /* ------agrega color al texto*/
-    border-radius: 10%;
-    font-size: 10px; 
-                  
+   
+
+        font-size: 10px; 
+    
 }
 
 
@@ -465,11 +427,11 @@ section label {
     display: none;
 }
 .main {
-    display: flex;
+display: flex;
     flex-flow: column nowrap;
     width: 100%;
     height: 350vh;
-       /* -----Agregando iomagen de fondo-------*/
+/* -----Agregando iomagen de fondo-------*/
     background-image: url("https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-repeat: no-repeat;           /*---------no repite la imagen de fondo*/
     background-size: cover;                 /* --------estirar la imagen*/
@@ -494,7 +456,7 @@ section label {
 }
 /* ------Etiqute de parrafo-------*/
 .main  p {
-    
+
     padding: 20px;
     font-style: italic;                        /*------Estilo de la fuente*/
     font-size: 20px;
@@ -513,7 +475,7 @@ img {
     flex-flow: column wrap;
     margin: 5px;
     padding: 5px;
-             
+
 }
 
 .galeria article {
@@ -521,12 +483,12 @@ img {
     height: 50vh;
     margin: 5px;
     padding: 5px;
-     text-align: center; 
+    text-align: center; 
 }
 
 /*-----Etiqueta de seccion----*/
 section {
-    
+
     padding: 20px;
 }
 /*-----Etiqueta usada en formulartio para agregar nombre-----*/
@@ -558,7 +520,7 @@ section label {
 .footer h3 {
     text-align: center;
     margin: 2px;
-    padding: 2px;
+        padding: 2px;
 
 
 }
@@ -571,6 +533,6 @@ section label {
     font-family: "Comic Sans MS", sans-serif;
     text-align: center;
 }
-    
-      
+
+
 }
