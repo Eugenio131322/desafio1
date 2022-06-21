@@ -109,39 +109,13 @@
 }
 
 
-.header nav {
-    display: flex;
-    flex-flow: row nowrap;
-   
-  
-    
-  
-}
+
 
 /*----Etiqueta de listas----*/
-.header nav span {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 15px;
-    list-style-type: none;                 /*----- eliminar listas*/
-   
-   
-}
 
 
-/*------Etiqueta de enlace------*/
-.header  a {
-    width: 70%;
-    background-color: rgb(207, 79, 19);
-    border: solid 2px white;            /*------bordes para el texto*/
-    margin: 5px;
-    padding: 10px;
-    text-decoration: none;                /* -----eliminar subrayado*/
-    color: black;                       /* ------agrega color al texto*/
-    border-radius: 10%; 
-    text-align: center;     
-}
+
+
 
 
 span a:hover {
@@ -158,6 +132,8 @@ span a:hover {
     padding: 15px 10px;
     overflow: hidden;
 }
+
+
 .menu span {
     color: black;
     margin: 5px;
@@ -540,3 +516,5 @@ section label {
 
 
 }
+
+
