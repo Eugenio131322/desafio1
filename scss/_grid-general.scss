@@ -1,0 +1,15 @@
+#grid-area{
+    display: grid;
+    grid-template-areas: 
+    
+    " encabezado encabezado "
+    
+    " menu1 contenido "
+    
+    " pie pie "
+    ;
+    grid-template-columns: 10% auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+}
