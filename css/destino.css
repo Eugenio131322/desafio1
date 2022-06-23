@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-----Reset-----*/
 * {
   margin: 0;
@@ -42,49 +43,53 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+section {
+  padding: 20px;
+}
+
 body {
   width: 100%;
   height: 100vh;
   background-color: green;
+  /*------------------------Transcisiones------------------------------*/
 }
-
-.header {
+body .header {
   display: flex; /* ----ajustandio el encabezado*/
   flex-flow: column nowrap;
   background-color: blanchedalmond; /*------color de fondo*/
 }
-.header article {
+body .header article {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   width: 25%;
 }
-.header article img {
+body .header article img {
   width: 60%;
   height: 60%;
   border-radius: 25%;
   margin-top: 5px;
   margin-top: 10px; /*------bordes redonde al logo*/
 }
-.header article h1 {
+body .header article h1 {
   color: #f50404; /*------color al texto*/
   font-family: roboto sans-serif; /*-----tipo de fuente*/
   text-align: center;
   padding: 5px; /*-----Espacio interno*/
   margin: 3px; /*------Espacio Externo*/
 }
-.header nav {
+body .header nav {
   display: flex;
   flex-flow: row nowrap;
 }
-.header nav span {
+body .header nav span {
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 15px;
   list-style-type: none; /*----- eliminar listas*/
 }
-.header nav span a {
+body .header nav span a {
   width: 70%;
   background-color: rgb(207, 79, 19);
   border: solid 2px white; /*------bordes para el texto*/
@@ -95,25 +100,22 @@ body {
   border-radius: 10%;
   text-align: center;
 }
-.header nav span a:hover {
+body .header nav span a:hover {
   background-color: white;
   color: #f50404;
 }
-
-.menu {
+body .menu {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   background-color: white;
-  padding: 15px 10px;
-  overflow: hidden;
+  padding: 5px 5px;
 }
-.menu span {
+body .menu span {
   color: black;
-  margin: 5px;
-  padding: 5px;
+  margin: 10px 1px;
+  padding: 10px 0px;
 }
-
-.main {
+body .main {
   display: flex;
   flex-flow: row wrap;
   /* -----Agregando iomagen de fondo-------*/
@@ -122,16 +124,16 @@ body {
   background-size: cover; /* --------estirar la imagen*/
   background-position: center center; /*----------centrar la imagen de fondo*/
 }
-.main a {
+body .main a {
   text-decoration: none;
   color: rgb(18, 44, 241);
   margin: 10px;
   padding: 10px;
 }
-.main a:hover {
+body .main a:hover {
   color: white;
 }
-.main h2 {
+body .main h2 {
   margin: 10px 10% 15px 10%;
   padding-left: 10%;
   text-transform: uppercase; /* ------cambiar texto a mayusculas*/
@@ -139,36 +141,32 @@ body {
   font-weight: bold; /*--------- resaltando texto*/
   font-size: 300%;
 }
-.main .galeria {
+body .main .galeria {
   display: flex;
   flex-flow: row wrap;
   margin: 5px;
   padding: 5px;
 }
-.main .galeria section {
-  padding: 20px;
-}
-.main .galeria section article {
+body .main .galeria article {
   margin: 5px;
   padding: 5px;
   text-align: center;
 }
-.main .galeria section article img {
+body .main .galeria article img {
   height: 20vh;
 }
-.main .galeria section article h3 {
+body .main .galeria article h3 {
   font-weight: bold;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 5px;
   padding: 5px;
 }
-
-.footer {
+body .footer {
   display: flex;
   flex-flow: column wrap;
   background-color: rgb(64, 139, 64);
 }
-.footer h2 {
+body .footer h2 {
   color: black;
   font-weight: bold;
   font-size: 300%;
@@ -176,17 +174,39 @@ body {
   margin: 2px;
   padding: 2px;
 }
-.footer h3 {
+body .footer h3 {
   text-align: center;
   margin: 2px;
   padding: 2px;
 }
-.footer p {
+body .footer p {
   margin-top: 2px;
   font-style: italic;
   font-size: 15px;
   font-family: "Comic Sans MS", sans-serif;
   text-align: center;
+}
+body .lineal {
+  background-image: linear-gradient(pink 23%, rgb(85, 133, 205) 43%, red 75%);
+}
+body .rotar {
+  transform: rotate(45deg);
+}
+body .escalar {
+  transform: scale(1.5, 1.1);
+}
+body .animacion {
+  animation-name: animacion;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes animacion {
+  from {
+    transform: rotate(1deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*--------/-----------------Tablet--------------/---------*/
@@ -194,16 +214,136 @@ body {
   body {
     background-color: blueviolet;
   }
-  #grid-area {
-    grid-template-columns: auto;
+  body #grid-area {
     grid-template-rows: auto;
   }
-  .header nav {
+  body .header nav {
     flex-flow: row wrap;
     background-color: black;
   }
-  .header nav .header a {
+  body .header nav .header span a {
+    width: 15%;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    background-color: blue;
+    /*------Etiqueta de enlace------*/
+    /*-------------------MAIN el Contenido ---------------------------------*/
+    /*------Etiqueta de titulo------*/
+    /*Etiqueta de titulo*/
+    /* ------Etiqute de parrafo-------*/
+    /*-------Etiqueta de article-------*/
+    /*-----Etiqueta de seccion----*/
+    /*-----Etiqueta usada en formulartio para agregar nombre-----*/
+    /*--------------------FOOTER el Pie de Pagina--------------------------*/
+  }
+  body #grid-area {
+    grid-template-areas: "encabezado" "menu1" "contenido" "pie";
+    grid-template-columns: 100%;
+  }
+  body .header nav {
+    background-color: black;
+    flex-flow: row wrap;
+    margin: 0%;
+  }
+  body .menu {
+    flex-flow: row nowrap;
+    overflow: visible;
+  }
+  body .menu span a {
+    margin: 0;
+    padding: 0;
+    color: blue;
+  }
+  body .header a {
+    margin: 3px;
+    padding: 8px;
     width: 25%;
+  }
+  body .main a {
+    display: none;
+  }
+  body .main {
+    display: flex;
+    flex-flow: column nowrap;
+    /* -----Agregando iomagen de fondo-------*/
+    background-image: url("https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-repeat: no-repeat; /*---------no repite la imagen de fondo*/
+    background-size: cover; /* --------estirar la imagen*/
+    background-position: center center; /*----------centrar la imagen de fondo*/
+  }
+  body .main h2 {
+    margin: 5%;
+    padding: 5%;
+    text-transform: uppercase; /* ------cambiar texto a mayusculas*/
+    color: brown;
+    font-weight: bold; /*--------- resaltando texto*/
+    font-size: 300%;
+    text-align: center; /* -----------tamaño de fuente*/
+  }
+  body .main h3 {
+    font-weight: bold;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin: 5px;
+    padding: 5px;
+  }
+  body .main p {
+    padding: 20px;
+    font-style: italic; /*------Estilo de la fuente*/
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body img {
+    width: 90%;
+    height: 40vh;
+  }
+  body .galeria {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 5px;
+    padding: 5px;
+  }
+  body .galeria article {
+    width: 100%;
+    height: 50vh;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+  body section {
+    padding: 20px;
+  }
+  body section label {
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 20px;
+  }
+  body .footer {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: rgb(64, 139, 64);
+  }
+  body .footer h2 {
+    color: black;
+    font-weight: bold;
+    font-size: 100%;
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+  }
+  body .footer h3 {
+    text-align: center;
+    margin: 2px;
+    padding: 2px;
+  }
+  body .footer p {
+    margin: 2px;
+    padding: 2px;
+    font-style: italic;
+    font-size: 15px;
+    font-family: "Comic Sans MS", sans-serif;
+    text-align: center;
   }
 }
 
