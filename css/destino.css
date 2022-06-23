@@ -9,9 +9,29 @@
 #grid-area {
   display: grid;
   grid-template-areas: " encabezado encabezado " " menu1 contenido " " pie pie ";
-  grid-template-columns: 10% auto;
+  grid-template-columns: 15% auto;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
+}
+
+header {
+  grid-area: encabezado;
+}
+
+.menu {
+  grid-area: menu1;
+}
+
+main {
+  grid-area: contenido;
+}
+
+footer {
+  grid-area: pie;
+}
+
+.border {
+  border: solid 2px palevioletred;
 }
 
 /* ------Etiqute de parrafo-------*/
