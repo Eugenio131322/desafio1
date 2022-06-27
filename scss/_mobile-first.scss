@@ -16,11 +16,17 @@
        
    
    .header nav  {
-       background-color: black;
-       flex-flow: row wrap;
-       margin: 0%;  
+        background-color: black;
+        flex-flow: row wrap;
+        margin: 0%; 
+           /*------Etiqueta de enlace------*/
+        a   {
+            margin: 3px;
+            padding: 8px;
+            width: 25%;  
+            }
                 }
-   .menu {
+   .menu    {
        flex-flow: row nowrap;
        overflow: visible;
         .menu span a {
@@ -28,13 +34,8 @@
             padding: 0;
             color: blue;      
                     }
-                }
-   /*------Etiqueta de enlace------*/
-   .header a {
-        margin: 3px;
-        padding: 8px;
-        width: 25%;  
             }
+
    /*-------------------MAIN el Contenido ---------------------------------*/
 
    .main {
@@ -45,60 +46,59 @@
         background-repeat: no-repeat;           /*---------no repite la imagen de fondo*/
         background-size: cover;                 /* --------estirar la imagen*/
         background-position: center center;     /*----------centrar la imagen de fondo*/
-       .main a {
+        a   {
             display: none;
-                }
+            }
+           /*------Etiqueta de titulo------*/
+        h2 {
+            margin: 5%;
+            padding: 5%;
+            text-transform: uppercase;                /* ------cambiar texto a mayusculas*/
+            color: brown;
+            font-weight: bold;                        /*--------- resaltando texto*/
+            font-size: 300%; 
+            text-align: center;                        /* -----------tamaño de fuente*/
+            } 
+        .galeria {
+            display: flex;
+            flex-flow: column wrap;
+            margin: 5px;
+            padding: 5px;
+            article {
+                width: 100%;
+                height: 50vh;
+                margin: 5px;
+                padding: 5px;
+                text-align: center;
+                img {
+                    width: 90%;
+                    height: 40vh;
+                    }
+                   /*Etiqueta de titulo*/
+                h3 {
+                    font-weight: bold;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    margin: 5px;    
+                    padding: 5px;
+}     
+            }
+            }       
         }
 
-   /*------Etiqueta de titulo------*/
-   .main h2 {
-       margin: 5%;
-       padding: 5%;
-       text-transform: uppercase;                /* ------cambiar texto a mayusculas*/
-       color: brown;
-       font-weight: bold;                        /*--------- resaltando texto*/
-       font-size: 300%; 
-       text-align: center;                        /* -----------tamaño de fuente*/
-   }
-   /*Etiqueta de titulo*/
-   .main h3 {
-       font-weight: bold;
-       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-       margin: 5px;    
-       padding: 5px;
-   }
+
+
 
    
    /*-------Etiqueta de article-------*/
    
-   img {
-       width: 90%;
-       height: 40vh;
-   }
+
    
-   .galeria {
-       display: flex;
-       flex-flow: column wrap;
-       margin: 5px;
-       padding: 5px;
+
    
-   }
-   
-   .galeria article {
-       width: 100%;
-       height: 50vh;
-       margin: 5px;
-       padding: 5px;
-       text-align: center; 
-   }
+
    
  
-   /*-----Etiqueta usada en formulartio para agregar nombre-----*/
-   section label {
-       text-transform: uppercase;
-       padding: 20px;
-       margin: 20px;
-   }
+
    /*--------------------FOOTER el Pie de Pagina--------------------------*/
    
    

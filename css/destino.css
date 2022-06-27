@@ -47,6 +47,13 @@ section {
   padding: 20px;
 }
 
+/*-----Etiqueta usada en formulartio para agregar nombre-----*/
+section label {
+  text-transform: uppercase;
+  padding: 20px;
+  margin: 20px;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -228,43 +235,33 @@ body .animacion {
 @media (max-width: 480px) {
   body {
     background-color: blue;
-    /*------Etiqueta de enlace------*/
-    /*-------------------MAIN el Contenido ---------------------------------*/
-    /*------Etiqueta de titulo------*/
-    /*Etiqueta de titulo*/
-    /* ------Etiqute de parrafo-------*/
-    /*-------Etiqueta de article-------*/
-    /*-----Etiqueta de seccion----*/
-    /*-----Etiqueta usada en formulartio para agregar nombre-----*/
-    /*--------------------FOOTER el Pie de Pagina--------------------------*/
   }
-  body #grid-area {
+  #grid-area {
     grid-template-areas: "encabezado" "menu1" "contenido" "pie";
     grid-template-columns: 100%;
   }
-  body .header nav {
+  .header nav {
     background-color: black;
     flex-flow: row wrap;
     margin: 0%;
+    /*------Etiqueta de enlace------*/
   }
-  body .menu {
-    flex-flow: row nowrap;
-    overflow: visible;
-  }
-  body .menu span a {
-    margin: 0;
-    padding: 0;
-    color: blue;
-  }
-  body .header a {
+  .header nav a {
     margin: 3px;
     padding: 8px;
     width: 25%;
   }
-  body .main a {
-    display: none;
+  .menu {
+    flex-flow: row nowrap;
+    overflow: visible;
   }
-  body .main {
+  .menu .menu span a {
+    margin: 0;
+    padding: 0;
+    color: blue;
+  }
+  /*-------------------MAIN el Contenido ---------------------------------*/
+  .main {
     display: flex;
     flex-flow: column nowrap;
     /* -----Agregando iomagen de fondo-------*/
@@ -272,8 +269,12 @@ body .animacion {
     background-repeat: no-repeat; /*---------no repite la imagen de fondo*/
     background-size: cover; /* --------estirar la imagen*/
     background-position: center center; /*----------centrar la imagen de fondo*/
+    /*------Etiqueta de titulo------*/
   }
-  body .main h2 {
+  .main a {
+    display: none;
+  }
+  .main h2 {
     margin: 5%;
     padding: 5%;
     text-transform: uppercase; /* ------cambiar texto a mayusculas*/
@@ -282,49 +283,38 @@ body .animacion {
     font-size: 300%;
     text-align: center; /* -----------tamaño de fuente*/
   }
-  body .main h3 {
-    font-weight: bold;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    margin: 5px;
-    padding: 5px;
-  }
-  body .main p {
-    padding: 20px;
-    font-style: italic; /*------Estilo de la fuente*/
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  body img {
-    width: 90%;
-    height: 40vh;
-  }
-  body .galeria {
+  .main .galeria {
     display: flex;
     flex-flow: column wrap;
     margin: 5px;
     padding: 5px;
   }
-  body .galeria article {
+  .main .galeria article {
     width: 100%;
     height: 50vh;
     margin: 5px;
     padding: 5px;
     text-align: center;
+    /*Etiqueta de titulo*/
   }
-  body section {
-    padding: 20px;
+  .main .galeria article img {
+    width: 90%;
+    height: 40vh;
   }
-  body section label {
-    text-transform: uppercase;
-    padding: 20px;
-    margin: 20px;
+  .main .galeria article h3 {
+    font-weight: bold;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    margin: 5px;
+    padding: 5px;
   }
-  body .footer {
+  /*-------Etiqueta de article-------*/
+  /*--------------------FOOTER el Pie de Pagina--------------------------*/
+  .footer {
     display: flex;
     flex-flow: column nowrap;
     background-color: rgb(64, 139, 64);
   }
-  body .footer h2 {
+  .footer h2 {
     color: black;
     font-weight: bold;
     font-size: 100%;
@@ -332,12 +322,12 @@ body .animacion {
     margin: 2px;
     padding: 2px;
   }
-  body .footer h3 {
+  .footer h3 {
     text-align: center;
     margin: 2px;
     padding: 2px;
   }
-  body .footer p {
+  .footer p {
     margin: 2px;
     padding: 2px;
     font-style: italic;
