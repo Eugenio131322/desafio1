@@ -16,8 +16,8 @@ body {
                 
                 width: 25%;
                 img {
-                    width: 60%;
-                    height: 60%;
+                    width: 50%;
+                    height: 70%;
                     border-radius: 25%; 
                     margin-top: 5px;
                     margin-top: 10px;              /*------bordes redonde al logo*/
@@ -33,7 +33,7 @@ body {
                     }
             nav {
                 display: flex;
-                flex-flow: row nowrap;
+
                 span{
                     display: flex;
                     justify-content: center;
@@ -69,6 +69,10 @@ body {
                 color: black;
                 margin: 10px 1px;
                 padding: 10px 0px;
+                a:hover {
+                    background-color: white;
+                    color: #f50404;
+                        }
                 }
 
             } 
@@ -103,7 +107,6 @@ body {
                 flex-flow: row wrap;
                 margin: 5px;
                 padding: 5px;
-
                     article {
                         margin: 5px;
                         padding: 5px;
@@ -151,7 +154,7 @@ body {
 /*------------------------Transcisiones------------------------------*/
 
 .lineal {
-    background-image: linear-gradient(pink 23%,rgb(85, 133, 205)43%,red 75% ); 
+    background-image: linear-gradient(pink 23%,rgb(242, 226, 146)43%,rgb(140, 204, 132) 75% ); 
 }
 
 .rotar {

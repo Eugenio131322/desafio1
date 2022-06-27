@@ -12,128 +12,62 @@
            ;
            grid-template-columns: 100%;     
        }
-   
-       
-   
-   .header nav  {
+   .header nav{
         background-color: black;
         flex-flow: row wrap;
-        margin: 0%; 
-           /*------Etiqueta de enlace------*/
-        a   {
+        margin: 0%;
+        a{
             margin: 3px;
             padding: 8px;
             width: 25%;  
-            }
-                }
-   .menu    {
+        }
+    }
+       
+ 
+   .menu{
        flex-flow: row nowrap;
-       overflow: visible;
-        .menu span a {
-            margin: 0;
-            padding: 0;
+       
+        a {
+            margin: 5px;
+            padding: 5px;
             color: blue;      
-                    }
             }
-
+        }
+        
    /*-------------------MAIN el Contenido ---------------------------------*/
 
    .main {
-        display: flex;
+  
+       
         flex-flow: column nowrap;
-   /* -----Agregando iomagen de fondo-------*/
-        background-image: url("https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-        background-repeat: no-repeat;           /*---------no repite la imagen de fondo*/
-        background-size: cover;                 /* --------estirar la imagen*/
-        background-position: center center;     /*----------centrar la imagen de fondo*/
         a   {
             display: none;
             }
            /*------Etiqueta de titulo------*/
         h2 {
             margin: 5%;
-            padding: 5%;
-            text-transform: uppercase;                /* ------cambiar texto a mayusculas*/
-            color: brown;
-            font-weight: bold;                        /*--------- resaltando texto*/
-            font-size: 300%; 
+            padding: 5%;   
             text-align: center;                        /* -----------tamaño de fuente*/
             } 
         .galeria {
-            display: flex;
             flex-flow: column wrap;
-            margin: 5px;
-            padding: 5px;
             article {
-                width: 100%;
-                height: 50vh;
-                margin: 5px;
-                padding: 5px;
-                text-align: center;
-                img {
-                    width: 90%;
-                    height: 40vh;
+               width: 100%;
                     }
-                   /*Etiqueta de titulo*/
-                h3 {
-                    font-weight: bold;
-                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                    margin: 5px;    
-                    padding: 5px;
-}     
-            }
-            }       
-        }
-
-
-
-
-   
-   /*-------Etiqueta de article-------*/
-   
-
-   
-
-   
-
-   
- 
-
+                }       
+        }           
    /*--------------------FOOTER el Pie de Pagina--------------------------*/
-   
-   
+
    .footer {
-       display: flex;
-       flex-flow: column nowrap;
-     
-       background-color: rgb(64, 139, 64);
-   }
+        flex-flow: column nowrap;
+        h2  {
+        font-size: 100%;
+            }
    
-   .footer  h2{
-       color: black;
-       font-weight: bold;
-       font-size: 100%;
-       text-align: center;
-       margin: 2px;
-       padding: 2px;
-   }
+        p   {
+            margin: 2px;
+            padding: 2px;
+            }
    
-   .footer h3 {
-       text-align: center;
-       margin: 2px;
-           padding: 2px;
-   
-   
-   }
-   
-   .footer p {
-       margin: 2px;
-       padding: 2px;
-       font-style: italic;
-       font-size: 15px;
-       font-family: "Comic Sans MS", sans-serif;
-       text-align: center;
-   }
-   
-    
-   }
+    }
+}
