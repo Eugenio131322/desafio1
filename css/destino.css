@@ -1,18 +1,296 @@
-/* Error: expected "{".
- *    ,
- * 12 |     grid-template-columns: 10% auto;
- *    |                                    ^
- *    '
- *   scss/_grid-general.scss 12:36  @import
- *   scss/origen.scss 4:9           root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 12 \2502      grid-template-columns: 10% auto;\a    \2502                                     ^\a    \2575 \a   scss/_grid-general.scss 12:36  @import\a   scss/origen.scss 4:9           root stylesheet';
+@charset "UTF-8";
+/*  Import  */
+/*-----Reset-----*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
+
+#grid-area {
+  display: grid;
+  grid-template-areas: " encabezado encabezado " " menu1 contenido " " pie pie ";
+  grid-template-columns: 10% auto;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+header {
+  grid-area: encabezado;
+}
+
+.menu {
+  grid-area: menu1;
+}
+
+main {
+  grid-area: contenido;
+}
+
+footer {
+  grid-area: pie;
+}
+
+.border {
+  border: solid 2px palevioletred;
+}
+
+/* ------Etiqute de parrafo-------*/
+.main p {
+  padding: 20px;
+  font-style: italic; /*------Estilo de la fuente*/
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  padding: 20px;
+}
+
+/*-----Etiqueta usada en formulartio para agregar nombre-----*/
+section label {
+  text-transform: uppercase;
+  padding: 20px;
+  margin: 20px;
+}
+
+/*  Variables  */
+/*  @mixin  */
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: green;
+  /*------------------------Transcisiones------------------------------*/
+}
+body .header {
+  display: flex; /* ----ajustandio el encabezado*/
+  flex-flow: column nowrap;
+  background-color: blanchedalmond; /*------color de fondo*/
+}
+body .header article {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 25%;
+}
+body .header article img {
+  width: 50%;
+  height: 70%;
+  border-radius: 25%;
+  margin-top: 5px;
+  margin-top: 10px; /*------bordes redonde al logo*/
+}
+body .header article h1 {
+  color: #f50404; /*------color al texto*/
+  font-family: roboto sans-serif; /*-----tipo de fuente*/
+  text-align: center;
+  padding: 5px; /*-----Espacio interno*/
+  margin: 3px; /*------Espacio Externo*/
+}
+body .header nav {
+  display: flex;
+}
+body .header nav span {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 15px;
+  list-style-type: none; /*----- eliminar listas*/
+}
+body .header nav span a {
+  width: 70%;
+  background-color: rgb(207, 79, 19);
+  border: solid 2px white; /*------bordes para el texto*/
+  margin: 5px;
+  padding: 10px;
+  text-decoration: none; /* -----eliminar subrayado*/
+  color: black; /* ------agrega color al texto*/
+  border-radius: 10%;
+  text-align: center;
+}
+body .header nav span a:hover {
+  background-color: white;
+  color: #f50404;
+}
+body .menu {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: white;
+  padding: 5px 5px;
+}
+body .menu span {
+  color: black;
+  margin: 10px 1px;
+  padding: 10px 0px;
+}
+body .menu span a:hover {
+  background-color: white;
+  color: #f50404;
+}
+body .main {
+  display: flex;
+  flex-flow: row wrap;
+  /* -----Agregando iomagen de fondo-------*/
+  background-image: url("https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-repeat: no-repeat; /*---------no repite la imagen de fondo*/
+  background-size: cover; /* --------estirar la imagen*/
+  background-position: center center; /*----------centrar la imagen de fondo*/
+}
+body .main a {
+  text-decoration: none;
+  color: rgb(18, 44, 241);
+  margin: 10px;
+  padding: 10px;
+}
+body .main a:hover {
+  color: white;
+}
+body .main h2 {
+  margin: 10px 10% 15px 10%;
+  padding-left: 10%;
+  text-transform: uppercase; /* ------cambiar texto a mayusculas*/
+  color: #f50404;
+  font-weight: bold; /*--------- resaltando texto*/
+  font-size: 300%;
+}
+body .main .galeria {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 4px;
+  padding: 4px;
+}
+body .main .galeria article {
+  margin: 4px;
+  padding: 4px;
+  text-align: center;
+}
+body .main .galeria article img {
+  height: 20vh;
+}
+body .main .galeria article h3, body .main .galeria article .footer h2, body .footer .main .galeria article h2 {
+  font-weight: bold;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 5px;
+  padding: 5px;
+}
+body .footer {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: rgb(64, 139, 64);
+}
+body .footer h2 {
+  color: black;
+  font-weight: bold;
+  font-size: 300%;
+}
+body .footer h3, body .footer h2 {
+  text-align: center;
+  margin: 2px;
+  padding: 2px;
+}
+body .footer p {
+  margin-top: 2px;
+  font-style: italic;
+  font-size: 15px;
+  font-family: "Comic Sans MS", sans-serif;
+  text-align: center;
+}
+body .lineal {
+  background-image: linear-gradient(pink 23%, rgb(242, 226, 146) 43%, rgb(140, 204, 132) 75%);
+}
+body .rotar {
+  transform: rotate(45deg);
+}
+body .escalar {
+  transform: scale(1.5, 1.1);
+}
+body .animacion {
+  animation-name: animacion;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes animacion {
+  from {
+    transform: rotate(1deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------/-----------------Tablet--------------/---------*/
+@media (min-width: 481px) and (max-width: 1023px) {
+  body {
+    background-color: blueviolet;
+  }
+  body #grid-area {
+    grid-template-rows: auto;
+  }
+  body .header nav {
+    flex-flow: row wrap;
+    background-color: black;
+  }
+  body .header nav .header span a {
+    width: 15%;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    background-color: blue;
+  }
+  #grid-area {
+    grid-template-areas: "encabezado" "menu1" "contenido" "pie";
+    grid-template-columns: 100%;
+  }
+  .header nav {
+    background-color: black;
+    flex-flow: row wrap;
+    margin: 0%;
+  }
+  .header nav a {
+    margin: 3px;
+    padding: 8px;
+    width: 25%;
+  }
+  .menu {
+    flex-flow: row nowrap;
+  }
+  .menu a {
+    margin: 5px;
+    padding: 5px;
+    color: blue;
+  }
+  /*-------------------MAIN el Contenido ---------------------------------*/
+  .main {
+    flex-flow: column nowrap;
+    /*------Etiqueta de titulo------*/
+  }
+  .main a {
+    display: none;
+  }
+  .main h2 {
+    margin: 5%;
+    padding: 5%;
+    text-align: center; /* -----------tamaño de fuente*/
+  }
+  .main .galeria {
+    flex-flow: column wrap;
+  }
+  .main .galeria article {
+    width: 100%;
+  }
+  /*--------------------FOOTER el Pie de Pagina--------------------------*/
+  .footer {
+    flex-flow: column nowrap;
+  }
+  .footer h2 {
+    font-size: 100%;
+  }
+  .footer p {
+    margin: 2px;
+    padding: 2px;
+  }
+}
+
+/*# sourceMappingURL=destino.css.map */
