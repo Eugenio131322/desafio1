@@ -1,9 +1,10 @@
 /* Error: expected "{".
- *   ,
- * 7 | @import "tipografias";
- *   |                      ^
- *   '
- *   scss/origen.scss 7:22  root stylesheet */
+ *    ,
+ * 12 |     grid-template-columns: 10% auto;
+ *    |                                    ^
+ *    '
+ *   scss/_grid-general.scss 12:36  @import
+ *   scss/origen.scss 4:9           root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a   \2577 \a 7 \2502  @import "tipografias";\a   \2502                       ^\a   \2575 \a   scss/origen.scss 7:22  root stylesheet';
+  content: 'Error: expected "{".\a    \2577 \a 12 \2502      grid-template-columns: 10% auto;\a    \2502                                     ^\a    \2575 \a   scss/_grid-general.scss 12:36  @import\a   scss/origen.scss 4:9           root stylesheet';
 }
