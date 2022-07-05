@@ -3,7 +3,18 @@
 $colores:#f50404;
 $size: 2px;
 
-/*  @mixin  */
+/*   Mapas   */
+$color:(
+    colorVerde:#408b40,
+    colorRojo:#f50404,
+    colorBeige:#ffebcd,
+    colorMarron:#cf4f13,
+    colorBlanco:#ffffff,
+    colorNegro:#000000,
+    colorAzul:#122cf1,
+);  
+
+/*   @mixin   */
 @mixin box($marg, $padd) {
     margin: $marg;
     padding: $padd;
@@ -12,14 +23,14 @@ $size: 2px;
 body {
     width: 100%;
     height: 100vh;
-    background-color: green;
+    background-color: #008000;
     
 
     
     .header {
             display: flex;                     /* ----ajustandio el encabezado*/
             flex-flow: column nowrap;
-            background-color:blanchedalmond;/*------color de fondo*/
+            background-color:map-get($map:$color, $key:colorBeige );/*------color de fondo*/
             article {
                 display: flex;
                 flex-flow: column nowrap;
@@ -53,7 +64,7 @@ body {
                     list-style-type: none;                 /*----- eliminar listas*/    
                     a   {
                         width: 70%;
-                        background-color: rgb(207, 79, 19);
+                        background-color: map-get($map: $color, $key: colorMarron);
                         border: solid 2px white;            /*------bordes para el texto*/
                         margin: 5px;
                         padding: 10px;
@@ -62,7 +73,7 @@ body {
                         border-radius: 10%; 
                         text-align: center; 
                         &:hover {
-                                background-color: white;
+                                background-color: map-get($map: $color, $key: colorBlanco );
                                 color: $colores;        
                                 }                        
                         }
@@ -73,15 +84,15 @@ body {
         .menu{
             display: flex;
             flex-flow: row wrap;
-            background-color: white;
+            background-color: map-get($map: $color, $key: colorBlanco);
             padding: 5px 5px;
           
             span {
-                color: black;
+                color: map-get($map: $color, $key: colorNegro);
                 margin: 10px 1px;
                 padding: 10px 0px;
                 a:hover {
-                    background-color: white;
+                    background-color: map-get($map: $color, $key: colorBlanco);
                     color: $colores;
                         }
                 }
@@ -98,18 +109,18 @@ body {
             background-position: center center;     /*----------centrar la imagen de fondo*/
             a   {
                 text-decoration: none;
-                color: rgb(18, 44, 241);
+                color: map-get($map: $color, $key: colorAzul);
                 margin: 10px;
                 padding: 10px; 
                 &:hover {
-                    color: white;   
+                    color: map-get($map: $color, $key: colorBlanco);   
                         }   
                 }
             h2  {
                 margin: 10px 10% 15px 10%;
                 padding-left: 10%;
                 text-transform: uppercase;                /* ------cambiar texto a mayusculas*/
-                color: $colores;
+                color: map-get($map: $color, $key: colorRojo);
                 font-weight: bold;                        /*--------- resaltando texto*/
                 font-size: 300%; 
                 }
@@ -137,10 +148,12 @@ body {
         .footer {
             display: flex;
             flex-flow: column wrap;
-            background-color: rgb(64, 139, 64);
+            background-color: map-get($map: $color, $key: colorVerde);
             h2  {
-                @extend h3;
-                color: black;
+                text-align: center;
+                margin: $size;
+                padding: $size;
+                color: map-get($map: $color, $key: colorNegro);
                 font-weight: bold;
                 font-size: 300%;
                 
